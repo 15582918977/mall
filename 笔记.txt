@@ -1,0 +1,93 @@
+<slot></slot>
+轮播图看，自己回去写一遍
+
+props:{
+		banner:{
+			type:Array,
+			default(){
+				return []
+			}	
+		}
+	}
+
+点击状态
+
+ height calc(100% - 93px)
+
+ul>li{shop$}*10
+
+局部滚动
+overflow hidden可写可不写
+overflow-y:scroll
+
+滚动
+npm install better-scroll --save
+import BScroll from 'better-scroll'
+click:true
+
+
+@click.native当需要监听组件的原生事件时，必须加上.native
+
+
+
+
+
+
+    var tbody = document.getElementsByClassName('has-many-order-forms')[0];
+var list = []
+
+        $(document).on('click','tbody',function(){
+            var form = $(document.getElementsByClassName("has-many-order-form"));
+            console.log(form)
+
+            
+
+            for(let f of form){
+                
+                list.forEach((v,i)=>{
+                    
+                    if(v===null){
+                        list.push(f)
+                    }
+                   else if(v!==f)
+                    list.push(f)
+                }) 
+                console.log(list)  
+            }
+            
+            
+
+            // for(let v of form){
+            //     var item = v;
+            //   if(v===null){
+            //       return item;
+            //   }  
+            // }
+
+            // tbody.appendChild(item)
+            
+            // valuename();
+            
+        })
+
+// function valuename(){
+//     var tr = document.getElementsByClassName("has-many-order-form")
+
+//     for(let v of tr){
+//         inneritem = v;
+//         if(v===null){
+//             return inneritem;
+//         }
+//     }
+
+
+//     var select = $(inneritem).find("select")[0];
+//     var name = $(inneritem).find("select")[0].name
+//     var value ;
+//     $(select).change(function(){
+//         //console.log($(this).val())
+//         value = $(this).val()
+//         console.log(name,value)
+//     })
+    
+// }
